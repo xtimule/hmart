@@ -14,14 +14,14 @@
                                                 <span class="new">New</span>
                                             </span>
                                             <div class="thumb">
-                                                <a href="{{ url 'product.get_url' }}" class="image">
+                                                <a href="{{ product.get_url }}" class="image">
                                                     <img src="{{product.image.url}}" alt="Product" />
-                                                    <img class="hover-image" src="{{product.image.url}}'" alt="Product" />
+                                                    <img class="hover-image" src="{{product.image.url}}" alt="Product" />
                                                 </a>
                                             </div>
                                             <div class="content">
-                                                <span class="category"><a href="#">{{product.category}}</a></span>
-                                                <h5 class="title"><a href="single-product.html">{{product.name}}
+                                                <span class="category"><a href="{{product.get_url}}">{{product.category}}</a></span>
+                                                <h5 class="title"><a href="{{product.get_url}}">{{product.name}}
                                                     </a>
                                                 </h5>
                                                 <span class="price">
@@ -31,8 +31,8 @@
                                             <div class="actions">
                                                 <button title="Add To Cart" class="action add-to-cart" data-bs-toggle="modal" data-bs-target="#exampleModal-Cart"><i
                                                     class="pe-7s-shopbag"></i></button>
-                                                <button class="action wishlist" title="Wishlist" data-bs-toggle="modal" data-bs-target="#exampleModal-Wishlist"><i
-                                                        class="pe-7s-like"></i></button>
+<!--                                                <button class="action wishlist" title="Wishlist" data-bs-toggle="modal" data-bs-target="#exampleModal-Wishlist"><i-->
+<!--                                                        class="pe-7s-like"></i></button>-->
                                                 <button class="action quickview" data-link-action="quickview" title="Quick view" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="pe-7s-look"></i></button>
                                                 <button class="action compare" title="Compare" data-bs-toggle="modal" data-bs-target="#exampleModal-Compare"><i
                                                         class="pe-7s-refresh-2"></i></button>
