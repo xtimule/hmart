@@ -137,9 +137,9 @@
                                         <li class="d-flex">
                                             <ul class="d-block">
 <!--                                                <li class="title"><a href="#">Man</a></li>-->
-                                                <li><a href="shop-3-column.html">Men</a></li>
-                                                <li><a href="shop-4-column.html">Women</a></li>
-                                                <li><a href="shop-left-sidebar.html">Kids</a></li>
+                                                {% for i in category %}
+                                                <li><a href="{{ category.ger_url }}">{{ category.name }}</a></li>
+                                                {% endfor %}
 <!--                                                <li><a href="shop-right-sidebar.html">Shop Right Sidebar</a></li>-->
 <!--                                                <li><a href="shop-list-left-sidebar.html">Shop List Left Sidebar</a>-->
 <!--                                                </li>-->
@@ -534,44 +534,44 @@
                 </div>
             </div>
         </div>
-        <!-- Hero/Intro Slider End -->
-        <!-- Banner Area Start -->
-        <div class="banner-area style-one pt-100px pb-100px">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="single-banner nth-child-1">
-                            <img src="assets/images/banner/3.webp" alt="">
-                            <div class="banner-content nth-child-1">
-                                <h3 class="title">Smart Watch For <br>
-                                Your Hand</h3>
-                                <span class="category">From $29.00</span>
-                                <a href="shop-left-sidebar.html" class="shop-link"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="single-banner nth-child-2 mb-30px mb-lm-30px mt-lm-30px ">
-                            <img src="assets/images/banner/4.webp" alt="">
-                            <div class="banner-content nth-child-2">
-                                <h3 class="title">Headphones</h3>
-                                <span class="category">From $95.00</span>
-                                <a href="shop-left-sidebar.html" class="shop-link"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                        <div class="single-banner nth-child-2">
-                            <img src="assets/images/banner/5.webp" alt="">
-                            <div class="banner-content nth-child-3">
-                                <h3 class="title">Smartphone</h3>
-                                <span class="category">From $69.00</span>
-                                <a href="shop-left-sidebar.html" class="shop-link"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Banner Area End -->
+<!--         Hero/Intro Slider End -->
+<!--         Banner Area Start -->
+<!--        <div class="banner-area style-one pt-100px pb-100px">-->
+<!--            <div class="container">-->
+<!--                <div class="row">-->
+<!--                    <div class="col-md-6">-->
+<!--                        <div class="single-banner nth-child-1">-->
+<!--                            <img src="assets/images/banner/3.webp" alt="">-->
+<!--                            <div class="banner-content nth-child-1">-->
+<!--                                <h3 class="title">Smart Watch For <br>-->
+<!--                                Your Hand</h3>-->
+<!--                                <span class="category">From $29.00</span>-->
+<!--                                <a href="shop-left-sidebar.html" class="shop-link"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-md-6">-->
+<!--                        <div class="single-banner nth-child-2 mb-30px mb-lm-30px mt-lm-30px ">-->
+<!--                            <img src="assets/images/banner/4.webp" alt="">-->
+<!--                            <div class="banner-content nth-child-2">-->
+<!--                                <h3 class="title">Headphones</h3>-->
+<!--                                <span class="category">From $95.00</span>-->
+<!--                                <a href="shop-left-sidebar.html" class="shop-link"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="single-banner nth-child-2">-->
+<!--                            <img src="assets/images/banner/5.webp" alt="">-->
+<!--                            <div class="banner-content nth-child-3">-->
+<!--                                <h3 class="title">Smartphone</h3>-->
+<!--                                <span class="category">From $69.00</span>-->
+<!--                                <a href="shop-left-sidebar.html" class="shop-link"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--         Banner Area End -->
 
 
 
