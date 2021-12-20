@@ -1,6 +1,8 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Product
 from category.models import Category
+
+
 def home(request, category_slug=None):
 
 
@@ -14,6 +16,14 @@ def home(request, category_slug=None):
         'products_count': products.count()
     }
     return render( request, 'index.html', context)
-def test(request):
-    return render(request, 'test.html')
+def product_detail(request, category_slug, product_slug):
+    # product = get_object_or_404(Product, slug=product_slug, category__slug=category_slug)
+    # context = {
+    #     'product': product
+    # }
+    return render(request, 'single-product.html')
+
+
 # Create your views here.
+# def test(request):
+#     return render(request, 'single-product.html')
