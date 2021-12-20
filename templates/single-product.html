@@ -116,7 +116,9 @@
                                     <input class="cart-plus-minus-box" type="text" name="qtybutton" value="1" />
                                 </div>
                                 <div class="pro-details-cart">
+                                    <a href="{% url 'add_cart' product.id %}">
                                     <button class="add-cart"> Add To Cart</button>
+                                    </a>
                                 </div>
                                 <div class="pro-details-compare-wishlist pro-details-wishlist ">
                                     <a href="wishlist.html"><i class="pe-7s-like"></i></a>

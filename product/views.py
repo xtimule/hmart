@@ -4,8 +4,6 @@ from category.models import Category
 
 
 def home(request, category_slug=None):
-
-
     if category_slug == None:
         products = Product.objects.filter(is_available=True)
     else:
