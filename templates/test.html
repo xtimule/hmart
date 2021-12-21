@@ -76,7 +76,7 @@
                                 <a href="#offcanvas-cart" class="header-action-btn header-action-btn-cart offcanvas-toggle pr-0">
                                     <i class="pe-7s-shopbag"></i>
                                     <span class="header-action-num">01</span>
-                                    <!-- <span class="cart-amount">€30.00</span> -->
+                                     <span class="cart-amount">€30.00</span>
                                 </a>
                                 <a href="#offcanvas-mobile-menu" class="header-action-btn header-action-btn-menu offcanvas-toggle d-lg-none">
                                     <i class="pe-7s-menu"></i>
@@ -234,77 +234,63 @@
         <div class="offcanvas-overlay"></div>
         <!-- offcanvas overlay end -->
         <!-- OffCanvas Wishlist Start -->
-        <div id="offcanvas-wishlist" class="offcanvas offcanvas-wishlist">
-            <div class="inner">
-                <div class="head">
-                    <span class="title">Wishlist</span>
-                    <button class="offcanvas-close">×</button>
-                </div>
-                <div class="body customScroll">
-                    <ul class="minicart-product-list">
-                        {% for card_item in card_items %}
-                        <li>
-                            <a href="single-product.html" class="image"><img src="{% static 'assets/images/product-image/1.webp' %}" alt="Cart product Image"></a>
-                            <div class="content">
-                                <a href="single-product.html" class="title">{{card_item.product.name}}</a>
-                                <span class="quantity-price">1 x <span class="amount">${{card_item.get_total}}</span></span>
-                                <a href="#" class="remove">×</a>
-                            </div>
-                        </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-                <div class="foot">
-                    <div class="buttons">
-                        <a href="wishlist.html" class="btn btn-dark btn-hover-primary mt-30px">view wishlist</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+<!--        <div id="offcanvas-wishlist" class="offcanvas offcanvas-wishlist">-->
+<!--            <div class="inner">-->
+<!--                <div class="head">-->
+<!--                    <span class="title">Wishlist</span>-->
+<!--                    <button class="offcanvas-close">×</button>-->
+<!--                </div>-->
+<!--                <div class="body customScroll">-->
+<!--                    <ul class="minicart-product-list">-->
+<!--                        {% for card_item in card_items %}-->
+<!--                        <li>-->
+<!--                            <a href="single-product.html" class="image"><img src="{% static 'assets/images/product-image/1.webp' %}" alt="Cart product Image"></a>-->
+<!--                            <div class="content">-->
+<!--                                <a href="single-product.html" class="title">{{card_item.product.name}}</a>-->
+<!--                                <span class="quantity-price">1 x <span class="amount">${{card_item.get_total}}</span></span>-->
+<!--                                <a href="#" class="remove">×</a>-->
+<!--                            </div>-->
+<!--                        </li>-->
+<!--                        {% endfor %}-->
+<!--                    </ul>-->
+<!--                </div>-->
+<!--                <div class="foot">-->
+<!--                    <div class="buttons">-->
+<!--                        <a href="wishlist.html" class="btn btn-dark btn-hover-primary mt-30px">view wishlist</a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
         <!-- OffCanvas Wishlist End -->
         <!-- OffCanvas Cart Start -->
-        <div id="offcanvas-cart" class="offcanvas offcanvas-cart">
-            <div class="inner">
-                <div class="head">
-                    <span class="title">Cart</span>
-                    <button class="offcanvas-close">×</button>
-                </div>
-                <div class="body customScroll">
-                    <ul class="minicart-product-list">
-                        <li>
-                            <a href="single-product.html" class="image"><img src="assets/images/product-image/1.webp" alt="Cart product Image"></a>
-                            <div class="content">
-                                <a href="single-product.html" class="title">Modern Smart Phone</a>
-                                <span class="quantity-price">1 x <span class="amount">$18.86</span></span>
-                                <a href="#" class="remove">×</a>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="single-product.html" class="image"><img src="assets/images/product-image/2.webp" alt="Cart product Image"></a>
-                            <div class="content">
-                                <a href="single-product.html" class="title">Bluetooth Headphone</a>
-                                <span class="quantity-price">1 x <span class="amount">$43.28</span></span>
-                                <a href="#" class="remove">×</a>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="single-product.html" class="image"><img src="assets/images/product-image/3.webp" alt="Cart product Image"></a>
-                            <div class="content">
-                                <a href="single-product.html" class="title">Smart Music Box</a>
-                                <span class="quantity-price">1 x <span class="amount">$37.34</span></span>
-                                <a href="#" class="remove">×</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="foot">
-                    <div class="buttons mt-30px">
-                        <a href="cart.html" class="btn btn-dark btn-hover-primary mb-30px">view cart</a>
-                        <a href="checkout.html" class="btn btn-outline-dark current-btn">checkout</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+<!--        <div id="offcanvas-cart" class="offcanvas offcanvas-cart">-->
+<!--            <div class="inner">-->
+<!--                <div class="head">-->
+<!--                    <span class="title">Cart</span>-->
+<!--                    <button class="offcanvas-close">×</button>-->
+<!--                </div>-->
+<!--                <div class="body customScroll">-->
+<!--                    <ul class="minicart-product-list">-->
+<!--                        {% for car_item in cart_items %}-->
+<!--                        <li>-->
+<!--                            <a href="{% url 'cart' %}" class="image"><img src="{{cart_item.image.url}}" alt="Cart product Image"></a>-->
+<!--                            <div class="content">-->
+<!--                                <a href="single-product.html" class="title">{{ cart_item.name }}</a>-->
+<!--                                <span class="quantity-price">1 x <span class="amount">$18.86</span></span>-->
+<!--                                <a href="#" class="remove">×</a>-->
+<!--                            </div>-->
+<!--                        </li>-->
+<!--                        {% endfor %}-->
+<!--                    </ul>-->
+<!--                </div>-->
+<!--                <div class="foot">-->
+<!--                    <div class="buttons mt-30px">-->
+<!--                        <a href="{% url 'cart' %}" class="btn btn-dark btn-hover-primary mb-30px">view cart</a>-->
+<!--&lt;!&ndash;                        <a href="checkout.html" class="btn btn-outline-dark current-btn">checkout</a>&ndash;&gt;-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
         <!-- OffCanvas Cart End -->
         <!-- OffCanvas Menu Start -->
         <div id="offcanvas-mobile-menu" class="offcanvas offcanvas-mobile-menu">
@@ -502,7 +488,7 @@
                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 d-flex justify-content-center position-relative align-items-end">
                                     <div class="show-case">
                                         <div class="hero-slide-image">
-                                            <img src="assets/images/hero/inner-img/hero-1-2.png" alt="" />
+                                            <img src="{% static 'assets/images/hero/inner-img/hero-1-2.png' %}" alt="" />
                                         </div>
                                     </div>
                                 </div>
@@ -577,7 +563,7 @@
                             <div class="col-md-6 col-lg-3 mb-md-30px mb-lm-30px">
                                 <div class="single-wedge">
                                     <div class="footer-logo">
-                                        <a href="index.html"><img src="assets/images/logo/footer-logo.png" alt=""></a>
+                                        <a href="index.html"><img src="{% static 'assets/images/logo/footer-logo.png' %}" alt=""></a>
                                     </div>
                                     <p class="about-text">Lorem ipsum dolor sit amet consl adipisi elit, sed do eiusmod templ incididunt ut labore
                                     </p>
@@ -609,11 +595,11 @@
                                     <div class="footer-links">
                                         <div class="footer-row">
                                             <ul class="align-items-center">
-                                                <li class="li"><a class="single-link" href="my-account.html">My Account</a></li>
+<!--                                                <li class="li"><a class="single-link" href="my-account.html">My Account</a></li>-->
                                                 <li class="li"><a class="single-link" href="contact.html">Contact</a></li>
-                                                <li class="li"><a class="single-link" href="cart.html">Shopping cart</a></li>
-                                                <li class="li"><a class="single-link" href="shop-left-sidebar.html">Shop</a></li>
-                                                <li class="li"><a class="single-link" href="login.html">Services Login</a></li>
+                                                <li class="li"><a class="single-link" href="{% url 'cart' %}">Shopping cart</a></li>
+                                                <li class="li"><a class="single-link" href="{% url 'home' %}">Shop</a></li>
+<!--                                                <li class="li"><a class="single-link" href="login.html">Services Login</a></li>-->
                                             </ul>
                                         </div>
                                     </div>
@@ -621,22 +607,22 @@
                             </div>
                             <!-- End single blog -->
                             <!-- Start single blog -->
-                            <div class="col-md-6 col-lg-3 col-sm-6 mb-lm-30px pl-lg-40px">
-                                <div class="single-wedge">
-                                    <h4 class="footer-herading">My Account</h4>
-                                    <div class="footer-links">
-                                        <div class="footer-row">
-                                            <ul class="align-items-center">
-                                                <li class="li"><a class="single-link" href="my-account.html">My Account</a></li>
-                                                <li class="li"><a class="single-link" href="contact.html">Contact</a></li>
-                                                <li class="li"><a class="single-link" href="cart.html">Shopping cart</a></li>
-                                                <li class="li"><a class="single-link" href="shop-left-sidebar.html">Shop</a></li>
-                                                <li class="li"><a class="single-link" href="login.html">Services Login</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+<!--                            <div class="col-md-6 col-lg-3 col-sm-6 mb-lm-30px pl-lg-40px">-->
+<!--                                <div class="single-wedge">-->
+<!--                                    <h4 class="footer-herading">My Account</h4>-->
+<!--                                    <div class="footer-links">-->
+<!--                                        <div class="footer-row">-->
+<!--                                            <ul class="align-items-center">-->
+<!--                                                <li class="li"><a class="single-link" href="my-account.html">My Account</a></li>-->
+<!--                                                <li class="li"><a class="single-link" href="contact.html">Contact</a></li>-->
+<!--                                                <li class="li"><a class="single-link" href="cart.html">Shopping cart</a></li>-->
+<!--                                                <li class="li"><a class="single-link" href="shop-left-sidebar.html">Shop</a></li>-->
+<!--                                                <li class="li"><a class="single-link" href="login.html">Services Login</a></li>-->
+<!--                                            </ul>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
                             <!-- End single blog -->
                             <!-- Start single blog -->
                             <div class="col-md-6 col-lg-3 col-sm-12">
@@ -645,9 +631,9 @@
                                     <div class="footer-links">
                                         <!-- News letter area -->
                                         <p class="address">Address: Your Address Goes Here.</p>
-                                        <p class="phone">Phone/Fax:<a href="tel:0123456789"> 0123456789</a></p>
-                                        <p class="mail">Email:<a href="mailto:demo@example.com"> demo@example.com</a></p>
-                                        <p class="mail"><a href="https://demo@example.com"> demo@example.com</a></p>
+                                        <p class="phone">Phone/Fax:<a href="tel:998903534449">+998(90)353-44-49</a></p>
+                                        <p class="mail">Email:<a href="mailto:gxumoyun1@gmail.com"> gxumoyun1@gmail.com</a></p>
+                                        <p class="mail"><a href="https://gxumoyun1@gmail.com"> gxumoyun1@gmail.com</a></p>
                                         <!-- News letter area  End -->
                                     </div>
                                 </div>

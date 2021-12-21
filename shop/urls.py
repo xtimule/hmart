@@ -20,5 +20,4 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('product.urls')),
-
 ] + static(MEDIA_URL, document_root=MEDIA_ROOT)
