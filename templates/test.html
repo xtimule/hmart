@@ -263,34 +263,34 @@
 <!--        </div>-->
         <!-- OffCanvas Wishlist End -->
         <!-- OffCanvas Cart Start -->
-<!--        <div id="offcanvas-cart" class="offcanvas offcanvas-cart">-->
-<!--            <div class="inner">-->
-<!--                <div class="head">-->
-<!--                    <span class="title">Cart</span>-->
-<!--                    <button class="offcanvas-close">×</button>-->
-<!--                </div>-->
-<!--                <div class="body customScroll">-->
-<!--                    <ul class="minicart-product-list">-->
-<!--                        {% for car_item in cart_items %}-->
-<!--                        <li>-->
-<!--                            <a href="{% url 'cart' %}" class="image"><img src="{{cart_item.image.url}}" alt="Cart product Image"></a>-->
-<!--                            <div class="content">-->
-<!--                                <a href="single-product.html" class="title">{{ cart_item.name }}</a>-->
-<!--                                <span class="quantity-price">1 x <span class="amount">$18.86</span></span>-->
-<!--                                <a href="#" class="remove">×</a>-->
-<!--                            </div>-->
-<!--                        </li>-->
-<!--                        {% endfor %}-->
-<!--                    </ul>-->
-<!--                </div>-->
-<!--                <div class="foot">-->
-<!--                    <div class="buttons mt-30px">-->
-<!--                        <a href="{% url 'cart' %}" class="btn btn-dark btn-hover-primary mb-30px">view cart</a>-->
-<!--&lt;!&ndash;                        <a href="checkout.html" class="btn btn-outline-dark current-btn">checkout</a>&ndash;&gt;-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
+        <div id="offcanvas-cart" class="offcanvas offcanvas-cart">
+            <div class="inner">
+                <div class="head">
+                    <span class="title">Cart</span>
+                    <button class="offcanvas-close">×</button>
+                </div>
+                <div class="body customScroll">
+                    <ul class="minicart-product-list">
+                        {% for cart_item in cart_items %}
+                        <li>
+                            <a href="{% url 'cart' %}" class="image"><img src="{{cart_item.product.image.url}}" alt="Cart product Image"></a>
+                            <div class="content">
+                                <a href="single-product.html" class="title">{{ cart_item.product.name }}</a>
+                                <span class="quantity-price">{{cart_item.quantity}} x <span class="amount">${{cart_item.product.price}}</span></span>
+                                <a href="{% url 'remove_cart' cart_item.product.id %}" class="remove">×</a>
+                            </div>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="foot">
+                    <div class="buttons mt-30px">
+                        <a href="{% url 'cart' %}" class="btn btn-dark btn-hover-primary mb-30px">view cart</a>
+<!--                        <a href="checkout.html" class="btn btn-outline-dark current-btn">checkout</a>-->
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- OffCanvas Cart End -->
         <!-- OffCanvas Menu Start -->
         <div id="offcanvas-mobile-menu" class="offcanvas offcanvas-mobile-menu">
@@ -466,7 +466,7 @@
                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 d-flex justify-content-center position-relative align-items-end">
                                     <div class="show-case">
                                         <div class="hero-slide-image">
-                                            <img src="assets/images/hero/inner-img/hero-1-1.png" alt="" />
+                                            <img src="{% static 'assets/images/modeling-phone.png' %}" alt="" />
                                         </div>
                                     </div>
                                 </div>
@@ -488,7 +488,7 @@
                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 d-flex justify-content-center position-relative align-items-end">
                                     <div class="show-case">
                                         <div class="hero-slide-image">
-                                            <img src="{% static 'assets/images/hero/inner-img/hero-1-2.png' %}" alt="" />
+                                            <img src="{% static 'assets/images/laptop_PNG.png' %}" alt="" />
                                         </div>
                                     </div>
                                 </div>

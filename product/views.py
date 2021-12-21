@@ -13,7 +13,7 @@ def home(request, category_slug=None):
         'products': products,
         'products_count': products.count()
     }
-    return render( request, 'index.html', context)
+    return render(request, 'index.html', context)
 
 def product_detail(request, category_slug, product_slug):
     product = get_object_or_404(Product, slug=product_slug, category__slug=category_slug)
