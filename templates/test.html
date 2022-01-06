@@ -207,7 +207,7 @@
 <!--                                        </li>-->
 <!--                                    </ul>-->
 <!--                                </li>-->
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="{% url 'home' %}">Contact</a></li>
                             </ul>
                         </div>
                     </div>
@@ -413,7 +413,7 @@
 <!--                                <li><a href="blog-single-right-sidebar.html">Single Right Sidbar</a>-->
 <!--                            </ul>-->
 <!--                        </li>-->
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="{% url 'home' %}">Contact</a></li>
                     </ul>
                 </div>
                 <!-- OffCanvas Menu End -->
@@ -596,7 +596,7 @@
                                         <div class="footer-row">
                                             <ul class="align-items-center">
 <!--                                                <li class="li"><a class="single-link" href="my-account.html">My Account</a></li>-->
-                                                <li class="li"><a class="single-link" href="contact.html">Contact</a></li>
+                                                <li class="li"><a class="single-link" href="{% url 'home' %}">Contact</a></li>
                                                 <li class="li"><a class="single-link" href="{% url 'cart' %}">Shopping cart</a></li>
                                                 <li class="li"><a class="single-link" href="{% url 'home' %}">Shop</a></li>
 <!--                                                <li class="li"><a class="single-link" href="login.html">Services Login</a></li>-->
@@ -647,7 +647,7 @@
                         <div class="line-shape-top line-height-1">
                             <div class="row flex-md-row-reverse align-items-center">
                                 <div class="col-md-6 text-center text-md-end">
-                                    <div class="payment-mth"><a href="#"><img class="img img-fluid" src="assets/images/icons/payment.png" alt="payment-image"></a></div>
+                                    <div class="payment-mth"><a href="#"><img class="img img-fluid" src="{% static 'assets/images/icons/payment.png' %}" alt="payment-image"></a></div>
                                 </div>
                                 <div class="col-md-6 text-center text-md-start">
                                     <p class="copy-text"> © 2021 <strong>Hmart</strong> Made With <i class="fa fa-heart"
